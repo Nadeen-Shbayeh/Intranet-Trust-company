@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\DeathController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
@@ -82,8 +83,9 @@ Route::post('/add-file/{file}',[FileController::class,'store'])->name('add.file.
 Route::get('/show-file/{file}',[FileController::class,'show'])->name('show-file');
 Route::get('/show-file',[FileController::class,'ShowUserFile'])->name('files');
 Route::get('/download-file/{file}',[FileController::class,'download'])->name('download-file');
-
-
+Route::get('/list-deathnews',[DeathController::class,'index'])->name('list-deathnews');
+Route::get('/create-deathnews',[DeathController::class,'create'])->name('create-deathnews');
+Route::post('/create-deathnews',[DeathController::class,'store'])->name('store-deathnews');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

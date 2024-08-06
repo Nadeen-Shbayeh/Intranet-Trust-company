@@ -9,6 +9,7 @@ use App\Models\Post;
 use App\Models\User;
 use App\Models\Branch;
 use App\Models\Department;
+use App\Models\death;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
@@ -95,17 +96,19 @@ class HomeController extends Controller
                 
             }
 
+            $death = death::latest()->take(4)->get();
+
             if (count($usersbd) === 0) {
                 array_push($usersbd,"There is no birth day today :( !");
            }
             $usertype=Auth()->user()->usertype;
             if($usertype == 'user'){
-                return view('dashboard',compact('count','posts','news','usersbd','online_users','count2','offline_users','lastnews','img1','img2','img3','img4'));
+                return view('dashboard',compact('count','posts','news','usersbd','online_users','count2','offline_users','lastnews','img1','img2','img3','img4','death'));
             }
             elseif($usertype == 'admin'){
 
                 
-                return view('admin.adminhome', compact('count','posts','news','usersbd','online_users','count2','offline_users','lastnews','img1','img2','img3','img4'));
+                return view('admin.adminhome', compact('count','posts','news','usersbd','online_users','count2','offline_users','lastnews','img1','img2','img3','img4','death'));
        
 
             }

@@ -4088,23 +4088,24 @@ body {
  	  	transform: scale(1.1) translateY(-5px);
  	  }
 
-     .slider-wrapper {
-      display: block;
-      
   
-
-      }
   
 .slider-container {
    
-    display: flex;
+  width: 100%;
+  height: 200%;
     align-items: center;
     justify-content: center;
     
+    margin-bottom: 5px;
+  
+}
 
-  
-  margin-bottom: 5px;
-  
+.slides img {
+  width: 100%;
+    
+    height: 200%;
+   
 }
 
 .slider {
@@ -4205,7 +4206,7 @@ a.slide__next,
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background-color: black;
+    background-color: white;
     margin: 0 10px 0 10px;
 }
 
@@ -4258,12 +4259,12 @@ iframe[sandbox] .read-article{
       overflow-x: hidden;
       overflow-y: auto;
       display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
  	  }
     .cards{
       display: grid;
@@ -4275,7 +4276,14 @@ iframe[sandbox] .read-article{
     
     .grid-container {
       display: grid;
-      grid-template-columns:   auto auto;
+      grid-template-columns:  auto auto;
+      grid-gap: 1px;
+ 
+      padding: 0.1em;
+    }
+    .grid-container .cardd{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
       grid-gap: 1px;
  
       padding: 0.1em;
@@ -4374,6 +4382,51 @@ border: none;
  
   
 }
+
+.cardd {
+  max-width: 960px;
+  border-radius: var(--border-radius-primary);
+  box-shadow: 24px 24px 80px rgba(0,0,0,0.1);
+  padding: 20px 20px 28px 20px;
+  box-sizing: border-box;
+  margin: 20px;
+  grid-auto-flow: column
+  grid-column-gap: 10px;
+  flex-direction: column;
+  
+ 
+}
+
+.card__image {
+  width: 100%;
+  max-height:200px;
+  border-radius: var(--border-radius-primary);
+ 
+ 
+}
+
+.card__content {
+ 
+
+   text-align: center;
+   padding: 20px 20px 28px 20px;
+   
+
+    
+  
+}
+
+
+.card__title {
+  font-family: var(--font-family-primary);
+  font-size: 12px;
+  
+  color: var(--color-text);
+  
+  
+  
+}
+
 
 
 .lnews{
@@ -4555,6 +4608,22 @@ function myFunction() {
   </div>
 </div>
 
+
+
+<div class="grid-container">
+@foreach( $death as $rs)
+<div class="cardd">
+
+  <img src="{{ url('storage/img/death.jpg')}}" class="card__image" alt="brown couch" />
+  <div class="card__content">
+    
+    <span class="card__title">{{$rs->description}} ل {{$rs->name}} بوفاة {{$rs->relation}}<span>
+  </div>
+  </div>
+@endforeach
+
+
+  </div>
           </div> 
 
          <div class="col-lg-8">

@@ -91,6 +91,7 @@
   <a href="{{ route('list-post') }}"><i class="fa fa-fw fa-layer-group"></i> Posts</a>
   <a href="{{ route('list-news') }}"><i class="fa fa-fw fa-newspaper"></i> Last News</a>
   <a href="{{ route('create-lastnews') }}"><i class="fa fa-fw fa-rocket"></i> Breaking News</a>
+  <a href="{{ route('list-deathnews') }}"><i class="fa fa-fw fa-frown-o"></i> Death news</a>
 
 </div>
 
