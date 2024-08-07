@@ -78,10 +78,10 @@ class NewsController extends Controller
 
     
     
-    public function delete(string $id)
+    public function destroy(string $id)
     {
-        User::destroy($id);
-        return redirect('users')->with("success","User Deleted !");
+        News::destroy($id);
+        return back()->with("success","Deleted successfully");
        
     }
 

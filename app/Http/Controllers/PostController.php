@@ -79,4 +79,11 @@ class PostController extends Controller
         $post = Post::find($id);
         return view('post.show-post')->with('post', $post);
     }
+
+    public function destroy(string $id)
+    {
+        Post::destroy($id);
+        return back()->with("success","Deleted successfully");
+       
+    }
 }

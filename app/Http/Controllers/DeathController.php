@@ -87,8 +87,10 @@ class DeathController extends Controller
      * @param  \App\Models\death  $death
      * @return \Illuminate\Http\Response
      */
-    public function destroy(death $death)
+    public function destroy(string $id)
     {
-        //
+        death::destroy($id);
+        return back()->with("success","Deleted successfully");
+       
     }
 }

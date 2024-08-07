@@ -90,6 +90,10 @@ Route::post('/create-deathnews',[DeathController::class,'store'])->name('store-d
 Route::get('/list-images',[ImgController::class,'index'])->name('list-images');
 Route::get('/create-images',[ImgController::class,'create'])->name('create-images');
 Route::post('/create-images',[ImgController::class,'store'])->name('store-images');
+Route::delete('/list-news/{news}', NewsController::class .'@destroy')->name('list-news.destroy');
+Route::delete('/list-post/{post}', PostController::class .'@destroy')->name('list-posts.destroy');
+Route::delete('/create-lastnews/{news}', LastNewsController::class .'@destroy')->name('create-lastnews.destroy');
+//Route::delete('/list-deathnews/{news}', DeathController::class .'@destroy')->name('list-deathnews.destroy');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -158,7 +158,14 @@ input[type=submit]:hover {
                                         <td>
                                        
                                             <a href="{{ url('/edit-lastnews/' . $item->id) }}" title="Edit news"><button class="btn btn-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i> Edit</button></a>
- 
+                                            <div class="col-sm">
+                                                <form action="{{ route('create-lastnews.destroy', $item->id) }}" method="post">
+                                                  @csrf
+                                                  @method('DELETE')
+                                                  <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </div>
+
                                         </td>
                                     </tr>
                                 @endforeach

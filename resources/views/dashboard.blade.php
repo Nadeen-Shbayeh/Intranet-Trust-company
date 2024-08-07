@@ -2727,215 +2727,6 @@ label {
   border-radius: 6px;
 }
 
-.darkmode {
-  background-color: #11111d;
-  /* Navigation */
-  /* Sidebar */
-  /* Dropdown */
-  /* Main Title */
-  /* Dashboard */
-  /* Chart */
-  /* Sort bar */
-  /* Table */
-  /* Form */
-  /* Sign up */
-  /* New page  */
-  /* White block */
-  /* Pagination */
-  /* Badges */
-  /* Buttons */
-  /* Footer */
-}
-
-.darkmode .main-nav--bg {
-  background-color: #161624;
-}
-
-.darkmode .search-wrapper input {
-  color: #d6d7e3;
-  background-color: #222235;
-}
-
-.darkmode .search-wrapper input::-webkit-input-placeholder {
-  background-color: #222235;
-}
-
-.darkmode .search-wrapper input::-moz-placeholder {
-  background-color: #222235;
-}
-
-.darkmode .search-wrapper input:-ms-input-placeholder {
-  background-color: #222235;
-}
-
-.darkmode .search-wrapper input::-ms-input-placeholder {
-  background-color: #222235;
-}
-
-.darkmode .search-wrapper input::placeholder {
-  background-color: #222235;
-}
-
-.darkmode .gray-circle-btn {
-  background-color: #222235;
-}
-
-.darkmode .sun-icon {
-  display: none;
-}
-
-.darkmode .moon-icon {
-  display: initial;
-  fill: #fff;
-}
-
-.darkmode .sidebar {
-  background-color: #161624 !important;
-}
-
-.darkmode .dropdown {
-  background-color: #11111d;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.darkmode .dropdown::before {
-  border-color: transparent transparent #11111d;
-}
-
-.darkmode .dropdown a {
-  border-bottom-color: #2C2C42;
-  color: #D6D7E3;
-}
-
-.darkmode .dropdown-btn {
-  color: #b9b9b9;
-}
-
-.darkmode .notification-dropdown__title {
-  color: #D6D7E3;
-}
-
-.darkmode .main-title {
-  color: #EFF0F6;
-}
-
-.darkmode .stat-cards-item {
-  background-color: #222235;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.darkmode .stat-cards-info__num {
-  color: #EFF0F6;
-}
-
-.darkmode .chart {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.darkmode #myChart {
-  background-color: #222235;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.darkmode .sort-bar {
-  background-color: #161624;
-}
-
-.darkmode .sort-btn {
-  color: #d6d7e3;
-}
-
-.darkmode .form {
-  background-color: #161624;
-}
-
-.darkmode .form-label {
-  color: #D6D7E3;
-}
-
-.darkmode .form-input {
-  background-color: #222235;
-  color: #D6D7E3;
-}
-
-.darkmode .sign-up__title {
-  color: #EFF0F6;
-}
-
-.darkmode .sign-up__subtitle {
-  color: #D6D7E3;
-}
-
-.darkmode .new-page-content input {
-  background-color: #363648;
-  color: #d6d7e3;
-}
-
-.darkmode .new-page-content .ql-toolbar {
-  background-color: #363648;
-  color: #d6d7e3;
-}
-
-.darkmode .white-block {
-  background-color: #222235;
-  color: #D6D7E3;
-}
-
-.darkmode .white-block__title {
-  color: #D6D7E3;
-}
-
-.darkmode .white-block .radio {
-  background-color: #37374B;
-}
-
-.darkmode .main-content {
-  background-color: #161624;
-}
-
-.darkmode .top-cat-list a {
-  border-color: #37374F;
-}
-
-.darkmode .top-cat-title h3 {
-  color: #EFF0F6;
-}
-
-.darkmode .top-cat-list__title {
-  color: #EFF0F6;
-}
-
-.darkmode .pagination a {
-  opacity: .5;
-  color: #FFFFFF;
-}
-
-.darkmode .pagination a.active {
-  opacity: 1;
-}
-
-.darkmode .badge-disabled {
-  background-color: rgba(255, 182, 72, 0.1);
-  color: #ffb648;
-}
-
-.darkmode .primary-white-btn {
-  border: 1px solid #222235 !important;
-  background-color: #161624;
-}
-
-.darkmode .footer {
-  border-top-color: #222235;
-}
-
-.darkmode .menu-toggle--gray {
-  background-image: url(../img/svg/Bulk/Menu-toggle-white.svg);
-}
-
 .moon-icon {
   display: none;
 }
@@ -3663,6 +3454,11 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.main {
+  margin-left: 120px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
 
 
 
@@ -3718,7 +3514,97 @@ body {
 
 }
 
+.white-block main{
+    width: 300px;
+    height: max-content;
+    min-height: 50px;
+    
+    
+    
+ 
+    box-sizing: border-box;
+}
+.white-block  main form{
+   
+    display: flex;
+    
+}
 
+
+.white-block main .result{
+
+    text-align: center;
+}
+.white-block main .result .name{
+    font-weight: bold;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.white-block main .temperature img{
+    width: 100px;
+    filter: drop-shadow(0 10px 20px #555);
+    margin-left: 90px;
+    justify-content: center;
+}
+.white-block main .temperature figcaption{
+    font-size: 1em;
+}
+.white-block main .description{
+    padding: 2px 0 10px;
+}
+.white-block main ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.white-block main li{
+    background-color: #f78a55;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 5px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #0003 50%
+    );
+    font-weight: bold;
+    font-size: small;
+}
+.white-block main ul li i{
+    font-size: 1em;
+    margin: 5px 5px;
+    display: block!important;
+}
+.white-block main li:nth-child(2){
+    background-color: #b56291;
+}
+.white-block main li:nth-child(3){
+    background-color: #48567b;
+}
+.white-block main.error{
+    animation: errorEffect 0.3s linear 1;
+}
+@keyframes errorEffect{
+    0%{
+        transform: translate(10px, 5px)
+    }
+    25%{
+        transform: translate(-5px, 0)
+    }
+    50%{
+        transform: translate(8px, 2px)
+    }
+    75%{
+        transform: translate(-2px, 5px)
+    }
+    100%{
+        transform: translate(0, 0); 
+    }
+}
 :root {
     --calendar-bg-color: #202020;
     --calendar-font-color: #FFF;
@@ -3988,7 +3874,7 @@ body {
 }
 .col-lg-4 .white-block {
  
- height: 330px;
+ height:  330px;
 
 
 }
@@ -4180,9 +4066,10 @@ iframe[sandbox] .read-article{
  	  }
     .cards{
       display: grid;
-      grid-template-columns: auto auto auto auto;
-      grid-gap: 20px;
+      grid-template-columns: auto auto auto;
+      grid-gap: 40px;
       margin-bottom: 0;
+      padding: 0.1em;
     }
 
     
@@ -4197,15 +4084,15 @@ iframe[sandbox] .read-article{
       display: grid;
       grid-template-columns: auto auto auto auto;
       grid-gap: 1px;
- 
-      padding: 0.1em;
+      border-radius: 10px;
+      padding: 0.2em;
     }
 
     .grid-container > div {
       background-color: #fff;
       text-align: center;
       padding: 1px 0;
-      font-size: 30px;
+      font-size: 40px;
      
     }
 
@@ -4223,7 +4110,7 @@ iframe[sandbox] .read-article{
     }
     .item p{
       width: 300px;
-      font-size: 12px;
+      font-size: 15px;
       margin-right: 5px;
       margin-top: 10px;
       text-align: right;
@@ -4305,6 +4192,7 @@ border: none;
   grid-auto-flow: column
   grid-column-gap: 10px;
   flex-direction: column;
+  
   
  
 }
@@ -4571,42 +4459,100 @@ function myFunction() {
                 <div class="col-lg-4">
                 
                     <article class="white-block">
-                        
+                          <main>
+                              <form type="hidden">
+                                  <input type="hidden"id="name" autocomplete="on">
+                                  <button>
+                                      <i class="fa-solid fa-magnifying-glass"></i>
+                                  </button>
+                              </form>
+                              <section class="result">
+
+                                  <figure class="name">
+                                      <figcaption>Lo1ndon</figcaption> 
+                                      <img src="https://flagsapi.com/GB/shiny/32.png">
+                                  </figure>
+
+                                  <figure class="temperature">
+                                      <img src="https://openweathermap.org/img/wn/10d@4x.png">
+                                      <figcaption>
+                                          <span>31</span>
+                                          <sup>o</sup>
+                                      </figcaption> 
+                                  </figure>
+                                  <p class="description">overcast clouds</p>
+                                  <ul>
+                                      <li>
+                                          <span>clouds</span>
+                                          <i class="fa fa-cloud"></i>
+                                          <span id="clouds">98</span>%
+                                      </li>
+                                      <li>
+                                          <span>humidity</span>
+                                          <i class="fa fa-tint"></i>
+                                          <span id="humidity">98</span>%
+                                      </li>
+                                      <li>
+                                          <span>pressure</span>
+                                          <i class="fas fa-tachometer-alt"></i>
+                                          <span id="pressure">1011</span>hPa
+                                      </li>
+                                  </ul>
+                              </section>
+                          </main>
+
+    <script>let id = '9505fd1df737e20152fbd78cdb289b6a';
+let url = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid=' + id;
+let city = document.querySelector('.name');
+let form = document.querySelector("form");
+let temperature = document.querySelector('.temperature');
+let description = document.querySelector('.description');
+let valueSearch = document.getElementById('name');
+let clouds = document.getElementById('clouds');
+let humidity = document.getElementById('humidity');
+let pressure = document.getElementById('pressure');
+let main = document.querySelector('main');
+form.addEventListener("submit", (e) => {
+    e.preventDefault();  
+    if(valueSearch.value != ''){
+        searchWeather();
+    }
+});
+const searchWeather = () => {
+    fetch(url+'&q='+ valueSearch.value)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            if(data.cod == 200){
+                city.querySelector('figcaption').innerHTML = data.name;
+                city.querySelector('img').src = `https://flagsapi.com/${data.sys.country}/shiny/32.png`;
+                temperature.querySelector('img').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+                temperature.querySelector('span').innerText = data.main.temp;
+                description.innerText = data.weather[0].description;
+
+                clouds.innerText = data.clouds.all;
+                humidity.innerText = data.main.humidity;
+                pressure.innerText = data.main.pressure;
+            }else{
+                main.classList.add('error');
+                setTimeout(() => {
+                    main.classList.remove('error');
+                }, 1000);
+            }
+            valueSearch.value = '';
+        })
+}
+// search Default
+const initApp = () => {
+    valueSearch.value = 'Palestine';
+    searchWeather();
+}
+initApp();</script>
                      
                            
                                 
-                                    <div class="absolute inset-0 bg-gray bg-opacity-10"></div>
-                                    <div class="relative z-10 container mx-auto  text-white">
-                                    <h2 class="text-xl font-bold mb-1">أسعار العملات</h2>
-                                    <p style="background-color:#7c8ea1;" class="text-sm mb-3 rounded-lg">الجمعة 08 ديسمبر 2023  9:36 صباحًا</p>
-                                    <div class="">
-                                <div style="background-color:#7c8ea1;" class="bg-gray rounded-lg p-1 mb-1">
-                                    <h3 class="text-sm font-bold mb-2">دولار / شيكل</h3>
-                                    <div class="flex justify-between items-center">
-                                    <p class="text-sm font-bold">بيع 3.7</p>
-                                    <p class="text-sm font-bold">شراء 3.68</p>
-                                    </div>
-                                </div>
-                                <div style="background-color:#7c8ea1;" class="bg-gray rounded-lg p-1 mb-1">
-                                    <h3 class="text-sm font-bold mb-2">دينار / شيكل</h3>
-                                    <div class="flex justify-between items-center">
-                                    <p class="text-sm font-bold">بيع 5.22</p>
-                                    <p class="text-sm font-bold">شراء 5.2</p>
-                                    </div>
-                                </div>
-                                <div style="background-color:#7c8ea1;" class="bg-gray rounded-lg p-1 mb-1">
-                                    <h3 class="text-sm font-bold mb-2">يورو / شيكل</h3>
-                                    <div class="flex justify-between items-center">
-                                    <p class="text-sm font-bold">بيع 3.99</p>
-                                    <p class="text-sm font-bold">شراء 3.95</p>
-                                    </div>
-                                </div>
-
-                                        
-                                </div>
-                            </div>
-
-                        </div>
+                                  
+                                
                     </article>
                 
                 
@@ -4666,7 +4612,7 @@ function myFunction() {
 <script>
   var items = $('.posts .card'); 
 var numItems = items.length;
-var perPage = 3;
+var perPage = 2;
 items.slice(perPage).hide();
 $('#pagination-container').pagination({
     items: numItems, itemsOnPage: perPage, prevText: "<",

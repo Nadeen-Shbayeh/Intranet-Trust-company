@@ -49,6 +49,12 @@ class LastNewsController extends Controller
         return view('news.edit-lastnews',compact('news'))->with("success","Updated successfully");
 
     }
+    public function destroy(string $id)
+    {
+        LastNews::destroy($id);
+        return back()->with("success","Deleted successfully");
+       
+    }
 
 
     

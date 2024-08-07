@@ -120,7 +120,13 @@ body {
                                         <td>
                                             <a href="{{ url('/show-news/' . $item->id) }}" title="View news"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/edit-news/' . $item->id) }}" title="Edit news"><button class="btn btn-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i> Edit</button></a>
-                                            <a href="{{ url('/delete-news/' . $item->id) }}" title="Edit news"><button class="btn btn-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i> Edit</button></a>
+                                            <div class="col-sm">
+                                                <form action="{{ route('list-news.destroy', $item->id) }}" method="post">
+                                                  @csrf
+                                                  @method('DELETE')
+                                                  <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                                </form>
+                                            </div>
                                            
                                         </td>
                                     </tr>
