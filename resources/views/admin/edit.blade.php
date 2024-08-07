@@ -67,7 +67,7 @@
                             <select name="department" id="department" class="form-control" value="{{$user->department}}">
                           
                                 @foreach($department as $item)
-                                    <option value="{{$item->name}}">{{$item->name}}</option>
+                                <option value="{{$item->name}}" {{ $item->name == $item->name ? 'selected' : '' }}>{{$item->name}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -76,7 +76,7 @@
                             
                             <select name="branch" id="branch" class="form-control">
                                 @foreach($branches as $item)
-                                    <option value="{{$item->name}}">{{$item->name}}</option>
+                                    <option value="{{$item->name}}" {{ $item->name == $item->name ? 'selected' : '' }}>{{$item->name}}</option>
                                 @endforeach
                             </select>
                         </div>

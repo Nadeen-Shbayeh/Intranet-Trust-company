@@ -2510,11 +2510,7 @@ label {
   padding: 20px;
 }
 
-.main {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-bottom: 60px;
-}
+
 
 .main-content {
   background-color: #fff;
@@ -3630,10 +3626,7 @@ label {
     padding: 10px 10px 5px;
   }
 
-  .main {
-    margin-bottom: 0;
-  }
-
+ 
   .footer--flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3670,80 +3663,8 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  display: block;
-}
 
-.sidenav a:hover {
-  color: gray;
-}
-
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 16px;}
-}
-
-/* Fixed sidenav, full height */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-/* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #818181;
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-
-/* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
-}
-
-/* Main content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
 
 /* Add an active class to the active dropdown button */
 .active {
@@ -3973,7 +3894,7 @@ body {
 }
 .news {
     width: 100%;
-    background: #cc4444;
+    background: #e88929  ;
     padding: 0 1%;
     
    
@@ -3981,19 +3902,10 @@ body {
 .title {
     width: 20%;
     text-align: center;
-    background: #c81c1c;
+    background: #c86016;
     position: relative;
 }
-.title:after {
-    position: absolute;
-    content: "";
-    right: -16%;
-    border-left: 20px solid #c81c1c;
-    border-top: 33px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 33px solid transparent;
-    top: 0;
-}
+
 .title h5 {
     font-size: 18px;
     margin: 12% 0;
@@ -4088,7 +4000,7 @@ body {
  	  	transform: scale(1.1) translateY(-5px);
  	  }
 
-  
+      
   
 .slider-container {
    
@@ -4101,10 +4013,10 @@ body {
   
 }
 
-.slides img {
+.slider .slides .slide img {
   width: 100%;
     
-    height: 200%;
+    height: 100%;
    
 }
 
@@ -4112,7 +4024,7 @@ body {
     width: 100%;
     
     height: 400px;
-    margin: 20px;
+ 
     text-align: center;
     border-radius: 20px;
     overflow: hidden;
@@ -4206,7 +4118,7 @@ a.slide__next,
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background-color: white;
+    background-color: black;
     margin: 0 10px 0 10px;
 }
 
@@ -4572,6 +4484,7 @@ function myFunction() {
            
           
          </div>
+         
 
       
    

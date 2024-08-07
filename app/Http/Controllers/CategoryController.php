@@ -23,14 +23,14 @@ class CategoryController extends Controller
 
     public function userindex()
     {
-        $created_by = User::find(Auth::id());
-        if($created_by == null){
+        $user = User::find(Auth::id());
+        if($user == null){
             return redirect('/');
         }else{
-            if($created_by->usertype == 'admin'){
+            if($user->usertype == 'admin'){
                 $category = Category::all();
-            }elseif($created_by->usertype == 'user'){
-                $category = DB::table('categories')->where('department', $created_by->department)->get();
+            }elseif($user->usertype == 'user'){
+                $category = DB::table('categories')->where('department', $user->department)->get();
             }                   
 
         }

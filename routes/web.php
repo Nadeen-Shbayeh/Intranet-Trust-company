@@ -11,6 +11,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ImgController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 
 /*
@@ -86,6 +87,9 @@ Route::get('/download-file/{file}',[FileController::class,'download'])->name('do
 Route::get('/list-deathnews',[DeathController::class,'index'])->name('list-deathnews');
 Route::get('/create-deathnews',[DeathController::class,'create'])->name('create-deathnews');
 Route::post('/create-deathnews',[DeathController::class,'store'])->name('store-deathnews');
+Route::get('/list-images',[ImgController::class,'index'])->name('list-images');
+Route::get('/create-images',[ImgController::class,'create'])->name('create-images');
+Route::post('/create-images',[ImgController::class,'store'])->name('store-images');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

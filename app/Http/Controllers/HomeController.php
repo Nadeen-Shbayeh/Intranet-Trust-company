@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\News;
+use App\Models\img;
 use App\Models\LastNews;
 use App\Models\Post;
 use App\Models\User;
@@ -39,7 +40,7 @@ class HomeController extends Controller
             $data = User::all();
             $posts = Post::latest()->paginate(8);
             $news = News::latest()->take(8)->get();
-            $new2 = News::all();
+            $new2 = img::all();
             $num = $new2->count();
             $img1 = $new2[$num -1]->imgfile;
             $img2 = $new2[$num -2]->imgfile;
