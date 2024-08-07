@@ -67,16 +67,17 @@
                             <select name="department" id="department" class="form-control" value="{{$user->department}}">
                           
                                 @foreach($department as $item)
-                                <option value="{{$item->name}}" {{ $item->name == $item->name ? 'selected' : '' }}>{{$item->name}}</option>
+                                <option value="{{$item->name}}" {{ $user->department == $item->name ? 'selected' : '' }}>{{$item->name}}</option>
+
                                 @endforeach
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <label style="margin-top:15px;" for="gender" >Choose Branch:</label>
+                            <label style="margin-top:15px;" id="branch" >Choose Branch:</label>
                             
                             <select name="branch" id="branch" class="form-control">
                                 @foreach($branches as $item)
-                                    <option value="{{$item->name}}" {{ $item->name == $item->name ? 'selected' : '' }}>{{$item->name}}</option>
+                                    <option value="{{$item->name}}" {{ $user->branch == $item->name ? 'selected' : '' }}>{{$item->name}}</option>
                                 @endforeach
                             </select>
                         </div>
