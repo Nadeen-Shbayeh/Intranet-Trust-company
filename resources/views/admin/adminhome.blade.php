@@ -53,7 +53,10 @@
 .sidenav a:hover, .dropdown-btn:hover {
   color: #181106;
 }
-
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
 
 </style>
 
@@ -62,27 +65,15 @@
   <div class="sidenav">
 
 
-
-<a style="space-between:center;"href="{{ route('users') }}"><i class="fa fa-fw fa-user"></i> Users list</a>
-
-
-
-
-  
-  <a href="{{ route('list-post') }}"><i class="fa fa-fw fa-layer-group"></i> Posts</a>
-  <a href="{{ route('list-news') }}"><i class="fa fa-fw fa-newspaper"></i> Last News</a>
-  <a href="{{ route('create-lastnews') }}"><i class="fa fa-fw fa-rocket"></i> Breaking News</a>
-  <a href="{{ route('list-deathnews') }}"><i class="fa fa-fw fa-frown-o"></i> Death news</a>
-  <a href="{{ route('list-deathnews') }}"><i class="fa fa-fw fa-image"></i> Images</a>
-
-
-
-<a href="{{ route('company') }}"><i class="fa fa-fw fa-city"></i> Company structure</a>
-
-
-
-
-  <a href="{{ route('category') }}"><i class="fa fa-fw fa-file"></i> File Categories</a>
+  <a  class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"><span class="fs-5 d-none d-sm-inline">القائمة</span></a>
+  <a style="space-between:center;"href="{{ route('users') }}"><i class="fa fa-fw fa-user"></i>  المستخدمين</a>
+  <a href="{{ route('list-post') }}"><i class="fa fa-fw fa-layer-group"></i>  اخبار الموظفين</a>
+  <a href="{{ route('list-news') }}"><i class="fa fa-fw fa-newspaper"></i> اخبار الشركة</a>
+  <a href="{{ route('create-lastnews') }}"><i class="fa fa-fw fa-rocket"></i>  اخبار عاجلة</a>
+  <a href="{{ route('list-deathnews') }}"><i class="fa fa-fw fa-frown-o"></i>  الموتى</a>
+  <a href="{{ route('list-deathnews') }}"><i class="fa fa-fw fa-image"></i>  صور الصفحة</a>
+  <a href="{{ route('company') }}"><i class="fa fa-fw fa-city"></i>   هيكلية الشركة   </a>
+  <a href="{{ route('category') }}"><i class="fa fa-fw fa-file"></i>  مشاركة الملفات </a>
 
 
 
